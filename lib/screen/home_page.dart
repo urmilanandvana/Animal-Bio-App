@@ -17,7 +17,7 @@ class FirstSplash extends StatefulWidget {
 }
 
 class _FirstSplashState extends State<FirstSplash> {
-  int index = 2;
+  int index = 0;
   @override
   // void initState() {
   //   // TODO: implement initState
@@ -248,11 +248,11 @@ class _FirstSplashState extends State<FirstSplash> {
                       future: APIHelper.apiHelper.imageAPI(),
                       builder: (context, snapShot) {
                         if (snapShot.hasData) {
-                          Uint8List? image = snapShot.data;
-                          return Image.memory(
+                          List? image = snapShot.data;
+                          return Image.network(
+                            "${image!}",
                             height: height * 0.38,
                             width: double.infinity,
-                            image!,
                             fit: BoxFit.cover,
                             colorBlendMode: BlendMode.modulate,
                           );

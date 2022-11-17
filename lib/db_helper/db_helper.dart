@@ -44,7 +44,7 @@ class DBHelper {
   insertSecondScreen({required List<SecondScreenInsert> data}) async {
     await initDB();
     for (int i = 0; i < data.length; i++) {
-      Uint8List? image = await APIHelper.apiHelper.imageAPI();
+      List? image = await APIHelper.apiHelper.imageAPI();
 
       String query =
           "INSERT INTO $tableName($colMonth, $colPrice, $colImage) VALUES(?, ?, ?)";
@@ -72,7 +72,7 @@ class DBHelper {
   Future<void> updateImage({required int length}) async {
     await initDB();
     for (int i = 0; i < length; i++) {
-      Uint8List? image = await APIHelper.apiHelper.imageAPI();
+      List? image = await APIHelper.apiHelper.imageAPI();
 
       String query =
           "UPDATE $tableName SET $colImage = ? WHERE $colId = ${i + 1}";
