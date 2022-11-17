@@ -28,15 +28,19 @@ class LastScreenInsert {
   final String name;
   final String description;
   final String category;
+  final String image;
   LastScreenInsert(
-      {required this.name, required this.description, required this.category});
+      {required this.name,
+      required this.description,
+      required this.category,
+      required this.image});
 }
 
 class LastScreenFetch {
   final String name;
   final String description;
   final String category;
-  final Uint8List image;
+  final String image;
   LastScreenFetch(
       {required this.name,
       required this.description,

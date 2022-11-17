@@ -16,7 +16,7 @@ class DBHelper {
   final String tableName = 'animals';
 
   final String colId = 'id';
-  final String colMonth = 'month';
+  final String colMonth = 'time';
   final String colPrice = 'price';
   final String colImage = 'image';
   final String colTitle = 'title';
@@ -84,17 +84,21 @@ class DBHelper {
   insertLastScreen({required List<LastScreenInsert> data}) async {
     await initDB();
     for (int i = 0; i < data.length; i++) {
-      Uint8List? image = await APIHelper.apiHelper.imageAPI();
-
       String query =
-          "INSERT INTO $tableName($colTitle,$colCategories, $colDescription, $colImage) VALUES(?, ?, ?)";
-      List arg = [data[i].name, data[i].category, data[i].description, image];
+          "INSERT INTO $tableName($colTitle,$colCategories, $colDescription, $colImage) VALUES(?, ?, ?, ?)";
+      List arg = [
+        data[i].name,
+        data[i].category,
+        data[i].description,
+        data[i].image
+      ];
 
       await db?.rawInsert(query, arg);
     }
   }
 
-  fetchLastScreen({required List<LastScreenInsert> data}) async {
+  Future<List<LastScreenFetch>> fetchLastScreen(
+      {required List<LastScreenInsert> data}) async {
     await initDB();
     await insertLastScreen(data: data);
     String query = (Global.categores == "")

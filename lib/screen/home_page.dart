@@ -310,13 +310,12 @@ class _FirstSplashState extends State<FirstSplash> {
                             if (snapshot.hasError) {
                               return Text("Error${snapshot.error}");
                             } else if (snapshot.hasData) {
-                              List<LastScreenFetch> data =
-                                  snapshot.data as List<LastScreenFetch>;
+                              List<LastScreenFetch>? data = snapshot.data;
                               return Container(
                                 height: height * 0.40,
                                 child: ListView.builder(
                                   scrollDirection: Axis.horizontal,
-                                  itemCount: data.length,
+                                  itemCount: data!.length,
                                   itemBuilder: (context, i) {
                                     return Padding(
                                       padding: const EdgeInsets.only(
@@ -332,39 +331,33 @@ class _FirstSplashState extends State<FirstSplash> {
                                             height: height * 0.26,
                                             width: width * 0.5,
                                             decoration: BoxDecoration(
+                                              color: Colors.blue,
                                               borderRadius:
-                                                  BorderRadius.circular(7),
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  color: Colors.black
-                                                      .withOpacity(0.2),
-                                                  blurRadius: 3,
-                                                )
-                                              ],
-                                              image: DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image:
-                                                    MemoryImage(data[i].image),
-                                              ),
+                                                  BorderRadius.circular(10),
+                                              // image: DecorationImage(
+                                              //   fit: BoxFit.cover,
+                                              //   image:
+                                              //       AssetImage(data[i].image),
+                                              // ),
                                             ),
                                           ),
                                           const SizedBox(height: 3),
-                                          Text(
-                                            data[i].name,
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                          Text(
-                                            data[i].description,
-                                            style: TextStyle(
-                                              color:
-                                                  Colors.white.withOpacity(0.8),
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
+                                          // Text(
+                                          //   data[i].name,
+                                          //   style: TextStyle(
+                                          //     color: Colors.white,
+                                          //     fontSize: 20,
+                                          //     fontWeight: FontWeight.w600,
+                                          //   ),
+                                          // ),
+                                          // Text(
+                                          //   data[i].description,
+                                          //   style: TextStyle(
+                                          //     color:
+                                          //         Colors.white.withOpacity(0.8),
+                                          //     fontWeight: FontWeight.w500,
+                                          //   ),
+                                          // ),
                                         ],
                                       ),
                                     );

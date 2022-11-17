@@ -18,72 +18,63 @@ class Global {
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Bear",
+      image: "assets/image/b1.jpg",
     ),
     LastScreenInsert(
       name: "Asian Block Bear",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Bear",
+      image: "assets/image/b2.jpg",
     ),
     LastScreenInsert(
       name: "Brown Bear",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Bear",
+      image: "assets/image/b3.jpg",
     ),
     LastScreenInsert(
       name: "Lion",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Lion",
+      image: "assets/image/l1.jpg",
     ),
     LastScreenInsert(
       name: "Afrikaans Lion",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
-      category: "Bear",
+      category: "Lion",
+      image: "assets/image/l2.jpg",
     ),
     LastScreenInsert(
-      name: "German Bear",
+      name: "German Lion",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
-      category: "Bear",
+      category: "Lion",
+      image: "assets/image/l3.jpg",
     ),
     LastScreenInsert(
       name: "Rabbit",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Rabbit",
+      image: "assets/image/r1.jpg",
     ),
     LastScreenInsert(
       name: "Afrikaans Rabbit ",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Rabbit",
+      image: "assets/image/r2.jpg",
     ),
     LastScreenInsert(
       name: "German Rabbit ",
       description:
           "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
       category: "Rabbit",
-    ),
-    LastScreenInsert(
-      name: "Reptiles",
-      description:
-          "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
-      category: "Reptiles",
-    ),
-    LastScreenInsert(
-      name: "Afrikaans Reptiles",
-      description:
-          "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
-      category: "Reptiles",
-    ),
-    LastScreenInsert(
-      name: "German Reptiles",
-      description:
-          "Since 1976, the mission of Farm Animal Rights Movement (FARM) is to end the use of animals for food through traditional media, social media, live events, and video outreach.",
-      category: "Reptiles",
+      image: "assets/image/r2.jpg",
     ),
   ];
 }
